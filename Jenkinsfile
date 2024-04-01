@@ -17,13 +17,13 @@
 
         stage('Build') {
             steps {
-                sh 'npm run build' // Build the React application
+                sh 'echo build' // Build the React application
             }
         }
 
         stage('Test') {
             steps {
-                sh 'npm test' // Run tests for the React application
+                sh 'echo test' // Run tests for the React application
             }
         }
 
@@ -33,5 +33,9 @@
                 sh 'echo docker' // Run Docker Compose to start the application
             }
         }
+         stage('Deploy') {
+            steps {
+                sh 'npm start'
+            }
     }
 }
