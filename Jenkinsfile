@@ -1,4 +1,4 @@
- pipeline {
+pipeline {
     agent any
 
     stages {
@@ -10,8 +10,7 @@
 
         stage('Dependency Installation') {
             steps {
-                // Assuming npm is used for frontend and pip for backend
-                sh 'npm install' // For frontend
+                sh 'npm install' // Assuming npm is used for frontend and pip for backend
             }
         }
 
@@ -33,9 +32,11 @@
                 sh 'echo docker' // Run Docker Compose to start the application
             }
         }
-         stage('Deploy') {
+
+        stage('Deploy') {
             steps {
                 sh 'npm start'
             }
+        }
     }
 }
