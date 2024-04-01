@@ -4,7 +4,7 @@
     stages {
         stage('Checkout') {
             steps {
-                git clone 'https://github.com/31304/JenkinLabTask.git'
+                git 'https://github.com/31304/JenkinLabTask.git'
             }
         }
 
